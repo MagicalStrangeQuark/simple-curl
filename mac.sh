@@ -1,9 +1,9 @@
 # bin/compile
 #!/usr/bin/env bash
 
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
+BUILD_DIR='/Users/wesleyfloresterres/Downloads/simple-curl'
+CACHE_DIR='/Users/wesleyfloresterres/Downloads/simple-curl'
+ENV_DIR='/Users/wesleyfloresterres/Downloads/simple-curl'
 
 CURL_VERSION="8.9.0"
 CURL_TAR="curl-$CURL_VERSION.tar.gz"
@@ -13,8 +13,6 @@ echo "-----> Installing curl $CURL_VERSION"
 
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
-
-#
 
 echo $BUILD_DIR/.heroku/curl # /tmp/build_00beeb96/.heroku/curl
 
