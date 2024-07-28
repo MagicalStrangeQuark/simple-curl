@@ -1,0 +1,4 @@
+# bin/detect
+#!/usr/bin/env bash
+echo "curl buildpack"
+exit 0
