@@ -16,6 +16,8 @@ echo "-----> Installing curl $CURL_VERSION"
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
 
+echo $BUILD_DIR/.heroku/curl
+
 # Download and extract curl
 curl -L $CURL_URL | tar -xz -C $BUILD_DIR/.heroku/curl --strip-components=1
 
