@@ -1,9 +1,9 @@
 # bin/compile
 #!/usr/bin/env bash
 
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
+BUILD_DIR='/Users/wesleyfloresterres/Downloads/simple-curl/'
+CACHE_DIR='/Users/wesleyfloresterres/Downloads/simple-curl/'
+ENV_DIR='/Users/wesleyfloresterres/Downloads/simple-curl/'
 
 CURL_VERSION="8.9.0"
 CURL_TAR="curl-$CURL_VERSION.tar.gz"
@@ -26,8 +26,8 @@ echo $BUILD_DIR
 echo "configure OK"
 make
 echo "make OK"
-# make install
+make install
 
 
 # Add curl to the PATH
-# echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" > $ENV_DIR/.profile.d/curl.sh
+echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" > $ENV_DIR/.profile.d/curl.sh
