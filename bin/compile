@@ -26,7 +26,7 @@ echo $BUILD_DIR
 echo "configure OK"
 make
 echo "make OK"
-# make install
+make install
 
 
 # Add curl to the PATH
