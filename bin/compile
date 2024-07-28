@@ -24,7 +24,8 @@ cd $BUILD_DIR/.heroku/curl
 echo $BUILD_DIR
 ./configure --prefix=$BUILD_DIR/.heroku/curl --with-openssl
 echo "configure OK"
-# make
+make
+echo "make OK"
 # make install
 
 
