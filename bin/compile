@@ -5,8 +5,6 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-echo "((8))"
-
 CURL_VERSION="8.9.0"
 CURL_TAR="curl-$CURL_VERSION.tar.gz"
 CURL_URL="https://curl.se/download/$CURL_TAR"
@@ -16,15 +14,16 @@ echo "-----> Installing curl $CURL_VERSION"
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
 
-echo $BUILD_DIR/.heroku/curl
+echo $BUILD_DIR/.heroku/curl # /tmp/build_00beeb96/.heroku/curl
 
 # Download and extract curl
 curl -L $CURL_URL | tar -xz -C $BUILD_DIR/.heroku/curl --strip-components=1
 
 # Build and install curl
 cd $BUILD_DIR/.heroku/curl
-# echo $BUILD_DIR
-# ./configure --prefix=$BUILD_DIR/.heroku/curl --with-openssl
+echo $BUILD_DIR
+./configure --prefix=$BUILD_DIR/.heroku/curl --with-openssl
+echo "configure OK"
 # make
 # make install
 
