@@ -14,6 +14,8 @@ echo "-----> Installing curl $CURL_VERSION"
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
 
+#
+
 echo $BUILD_DIR/.heroku/curl # /tmp/build_00beeb96/.heroku/curl
 
 # Download and extract curl
@@ -27,7 +29,6 @@ echo "configure OK"
 make
 echo "make OK"
 make install
-
 
 # Add curl to the PATH
 # echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" > $ENV_DIR/.profile.d/curl.sh
