@@ -30,8 +30,11 @@ make
 echo "make OK"
 make install
 
+echo "___________________ "
 echo $(ls $ENV_DIR/.profile.d)
+echo "___________________ "
 echo $(ls $ENV_DIR)
+echo "___________________ "
 
 # Add curl to the PATH
 echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" >$ENV_DIR/.profile.d/curl.sh
