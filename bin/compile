@@ -19,11 +19,11 @@ curl -L $CURL_URL | tar -xz -C $BUILD_DIR/.heroku/curl --strip-components=1
 
 # Build and install curl
 cd $BUILD_DIR/.heroku/curl
+echo $BUILD_DIR
 ./configure --prefix=$BUILD_DIR/.heroku/curl --with-openssl
 make
 make install
 
-echo $ENV_DIR
 
 # Add curl to the PATH
 echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" > $ENV_DIR/.profile.d/curl.sh
