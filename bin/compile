@@ -19,7 +19,7 @@ CURL_URL="https://curl.se/download/$CURL_TAR"
 echo "-----> Installing curl $CURL_VERSION"
 
 echo "Listing directory files..."
-ls $BUILD_DIR/.heroku/curl
+#ls $BUILD_DIR/.heroku/curl
 
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
@@ -43,11 +43,11 @@ echo "make clean OK"
 make install
 
 echo "_____ Listing env dir content ______________ "
-ls $ENV_DIR
+echo $(ls $ENV_DIR)
 echo "___________________ "
 
 # remote: ls: cannot access '/tmp/d20240729-74-kwuqgr/.profile.d': No such file or directory
 # remote: ls: cannot access '/tmp/d20240729-76-jukgim/.profile.d': No such file or directory
 
 # Add curl to the PATH
-echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" >$ENV_DIR/.profile.d/curl.sh
+#echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" >$ENV_DIR/.profile.d/curl.sh
