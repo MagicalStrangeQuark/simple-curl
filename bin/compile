@@ -21,6 +21,8 @@ echo $BUILD_DIR/.heroku/curl # /tmp/build_00beeb96/.heroku/curl
 # Download and extract curl
 curl -L $CURL_URL | tar -xz -C $BUILD_DIR/.heroku/curl --strip-components=1
 
+chmod -R 755 $BUILD_DIR/.heroku/curl
+
 # Build and install curl
 cd $BUILD_DIR/.heroku/curl
 echo $BUILD_DIR
