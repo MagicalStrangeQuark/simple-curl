@@ -43,9 +43,9 @@ echo "make clean OK"
 make install
 
 echo "___________________ "
-echo $(ls $ENV_DIR/.profile.d)
+# echo $(ls $ENV_DIR/.profile.d)
 echo "___________________ "
-echo $(ls $ENV_DIR)
+# echo $(ls $ENV_DIR)
 echo "___________________ "
 
 # remote: ls: cannot access '/tmp/d20240729-74-kwuqgr/.profile.d': No such file or directory
