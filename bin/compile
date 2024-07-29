@@ -28,6 +28,7 @@ echo $BUILD_DIR
 echo "configure OK"
 make
 echo "make OK"
+make clean
 make install
 
 echo "___________________ "
