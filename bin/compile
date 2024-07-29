@@ -34,7 +34,7 @@ echo $BUILD_DIR # remote: /tmp/build_fac87456
 ./configure --prefix=$BUILD_DIR/.heroku/curl --with-ssl
 echo "configure OK"
 make
-echo "make OK"
+echo "make OK."
 make clean
 echo "make clean OK"
 make install
