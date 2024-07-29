@@ -34,10 +34,12 @@ make clean
 make install
 
 echo "___________________ "
-echo $(ls $ENV_DIR/.profile.d)
+# echo $(ls $ENV_DIR/.profile.d)
 echo "___________________ "
-echo $(ls $ENV_DIR)
+# echo $(ls $ENV_DIR)
 echo "___________________ "
+
+# remote: ls: cannot access '/tmp/d20240729-74-kwuqgr/.profile.d': No such file or directory
 
 # Add curl to the PATH
 echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" >$ENV_DIR/.profile.d/curl.sh
