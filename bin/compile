@@ -11,6 +11,8 @@ CURL_URL="https://curl.se/download/$CURL_TAR"
 
 echo "-----> Installing curl $CURL_VERSION"
 
+echo "Listing directory files..."
+ls $BUILD_DIR/.heroku/curl
 # Create a directory for curl
 mkdir -p $BUILD_DIR/.heroku/curl
 
@@ -25,7 +27,7 @@ chmod -R 755 $BUILD_DIR/.heroku/curl
 
 # Build and install curl
 cd $BUILD_DIR/.heroku/curl
-echo $BUILD_DIR
+echo $BUILD_DIR # remote: /tmp/build_fac87456
 ./configure --prefix=$BUILD_DIR/.heroku/curl --with-ssl
 echo "configure OK"
 make
@@ -40,6 +42,7 @@ echo "___________________ "
 echo "___________________ "
 
 # remote: ls: cannot access '/tmp/d20240729-74-kwuqgr/.profile.d': No such file or directory
+# remote: ls: cannot access '/tmp/d20240729-76-jukgim/.profile.d': No such file or directory
 
 # Add curl to the PATH
 echo "export PATH=\$PATH:$BUILD_DIR/.heroku/curl/bin" >$ENV_DIR/.profile.d/curl.sh
