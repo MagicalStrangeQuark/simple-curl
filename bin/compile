@@ -46,6 +46,8 @@ echo "_____ Listing env dir content ______________ "
 echo $(ls $ENV_DIR)
 echo "_____ Listing build dir content ______________ "
 echo $(ls $BUILD_DIR)
+echo "_____ Listing home dir content ______________ "
+echo $(ls $HOME)
 echo "___________________ "
 
 # remote: ls: cannot access '/tmp/d20240729-74-kwuqgr/.profile.d': No such file or directory
