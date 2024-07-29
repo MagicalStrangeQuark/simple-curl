@@ -5,6 +5,8 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "Start build..."
+
 CURL_VERSION="8.9.0"
 CURL_TAR="curl-$CURL_VERSION.tar.gz"
 CURL_URL="https://curl.se/download/$CURL_TAR"
@@ -34,6 +36,8 @@ make
 echo "make OK"
 make clean
 make install
+#
+#
 
 echo "___________________ "
 # echo $(ls $ENV_DIR/.profile.d)
